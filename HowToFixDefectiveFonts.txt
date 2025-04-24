@@ -1,0 +1,67 @@
+# Anleitung zum Finden und Entfernen defekter Schriftarten
+
+Hallo zusammen,
+
+diese beiden PowerShell-Skripte helfen, defekte Schriftarten unter Windows zu finden und zu entfernen. Sie sind besonders nützlich, wenn Programme wie Photoshop Elements Probleme mit Schriftarten haben. Die Skripte sind sicher, einfach zu verwenden und erstellen ein Backup der entfernten Schriftarten.
+
+## Inhalt
+- CheckDefectiveFonts.ps1 (oder .txt): Skript zum Finden defekter Schriftarten.
+- RemoveDefectiveFonts.ps1 (oder .txt): Skript zum Entfernen defekter Schriftarten (mit Backup).
+- HowToFixDefectiveFonts.txt: Diese Anleitung.
+
+## Voraussetzungen
+- Windows-Betriebssystem (getestet auf Windows 10 und 11).
+- PowerShell (vorinstalliert auf Windows).
+- Administratorrechte für das Entfernen von Schriftarten.
+
+## Anleitung
+1. **Dateien herunterladen**:
+   - Lade die Skripte von [GitHub-Link, später einfügen, z. B. https://github.com/DeinBenutzername/FixDefectiveFonts] herunter.
+   - Alternativ: Lade die .zip-Datei herunter, falls bereitgestellt.
+
+2. **Skripte vorbereiten**:
+   - Wenn du die .txt-Dateien (CheckDefectiveFonts.txt, RemoveDefectiveFonts.txt) heruntergeladen hast:
+     - Benenne sie in .ps1 um, z. B. CheckDefectiveFonts.txt -> CheckDefectiveFonts.ps1.
+     - Alternativ: Kopiere den Inhalt in eine neue .ps1-Datei mit einem Texteditor (z. B. Notepad).
+   - Wenn du die .ps1-Dateien direkt hast, sind sie bereits einsatzbereit.
+   - Speichere die Skripte in einem Ordner, z. B. C:\Users\DeinName\FixDefectiveFonts.
+
+3. **Skripte ausführen**:
+   - Öffne PowerShell als Administrator:
+     - Suche im Startmenü nach "PowerShell", klicke mit der rechten Maustaste und wähle "Als Administrator ausführen".
+   - Navigiere zum Ordner mit den Skripten, z. B.:
+     ```
+     cd C:\Users\DeinName\FixDefectiveFonts
+     ```
+   - Führe das erste Skript aus, um defekte Schriftarten zu finden:
+     ```
+     .\CheckDefectiveFonts.ps1
+     ```
+     - Das Skript zeigt eine Liste defekter Schriftarten (falls vorhanden).
+   - Führe das zweite Skript aus, um defekte Schriftarten zu entfernen:
+     ```
+     .\RemoveDefectiveFonts.ps1
+     ```
+     - Das Skript erstellt ein Backup der entfernten Schriftarten in einem Ordner (z. B. C:\Users\DeinName\FontBackup).
+
+4. **Hinweise**:
+   - Überprüfe den Code vor dem Ausführen (z. B. öffne die .ps1- oder .txt-Dateien in Notepad), um sicherzustellen, dass er vertrauenswürdig ist.
+   - Die Skripte wurden mit VirusTotal geprüft und sind sicher (siehe GitHub für Details, falls hochgeladen).
+   - Falls PowerShell eine Fehlermeldung wegen der Ausführungsrichtlinie zeigt, führe folgenden Befehl aus:
+     ```
+     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass
+     ```
+     Setze die Richtlinie nach dem Gebrauch zurück:
+     ```
+     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Restricted
+     ```
+
+## Sicherheit
+- Die Skripte enthalten keinen schädlichen Code und wurden entwickelt, um transparent und sicher zu sein.
+- Du kannst den Code auf GitHub prüfen: [GitHub-Link später einfügen].
+- Bei Fragen oder Problemen kontaktiere mich im ComputerBase-Forum (Christer Häberli).
+
+Vielen Dank, dass ihr meine Skripte ausprobiert! Ich hoffe, sie helfen euch weiter.
+
+Viele Grüße,
+Christer Häberli
